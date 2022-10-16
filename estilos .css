@@ -1,3 +1,58 @@
+:root {
+          /* Declarar las variables */
+          --naranja:#F90;
+          --blanco:#FFF;
+          --negro:#000;
+          /* camelCase  */
+          --grisClaro: #272727;
+          --grisOscuro:#BBB;
+
+
+         }
+         /* Sass variables: $=  2007 */
+
+
+
+
+
 body {
-         background-color: aquamarine;
+        /* Agregamos un color de fondo parecido a la imagen que ayude a que cuando cargue  no haya mucho "salto visual" 
+               Para utilizar una variable usamos var ( ) con el nombre de la variable que querramos*/
+         background-color: var(--grisOscuro);
+             /* Imagen de fondo se repite  */
+         background-image: url(images/pattern.jpg);
+
+             /* Camnbiamos la fuente de todo el sitio */
+             font-family: Arial, Helvetica, sans-serif;
         }
+
+
+.cabecera,
+.contenido {
+                     /* Limitamos el ancho de los elementos y los centramos en el medio de la pantalla usando márgenes automáticos
+                     margin:auto hace lo mismo */
+                    max-width: 1200px;
+                    margin-right: auto;
+                     margin-left: auto;
+
+                    }        
+
+.cabecera {
+           
+                 display: flex;
+                 justify-content: space-between;
+                 }         
+
+.cabecera h1 {
+                       color: var(--naranja);
+                       font-size: 20px;
+
+}
+                      
+                      
+                                       
+ .contenido {
+                background-color: var(--blanco);
+                color: var(--negro)
+
+                   }                 
