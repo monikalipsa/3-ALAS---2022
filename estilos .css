@@ -4,8 +4,9 @@
           --blanco:#FFF;
           --negro:#000;
           /* camelCase  */
-          --grisClaro: #272727;
-          --grisOscuro:#BBB;
+          --grisOscuro: #272727;
+          --grisClaro:#BBB;
+          --amarillo: #f7d011;
 
 
          }
@@ -38,7 +39,7 @@ body {
                     }        
 
 .cabecera {
-           
+                  align-items: center;
                  display: flex;
                  justify-content: space-between;
                  }         
@@ -52,7 +53,113 @@ body {
                       
                                        
  .contenido {
-                background-color: var(--blanco);
-                color: var(--negro)
+                    border-radius: 14px 14px 0 0;
+                    background-color: var(--blanco);
+                    color: var(--negro)
+                    }                 
 
-                   }                 
+    /*-----------------------------------------------------------------------------
+                                NAVEGACION  
+    ------------------------------------------------------------------------------- */
+    .nav {
+                 border-radius: 14px 14px 0 0;
+                 background-color: var(--naranja);
+                 display: flex; 
+                 justify-content: space-between;
+             }
+
+    .lista  {
+                 
+                 list-style-type: none  ;     /*para sacar los puntitos*/
+                 display: flex ;
+                 justify-content: flex-start;
+                 /* gap: 20px; */
+                  
+               }
+
+    .lista li  {
+                  
+                  padding: 10px;
+                  border-right: 1px solid var(--amarillo);
+                }
+
+    .lista a {
+                  text-decoration: none;  /*propiedad para sacar el subrayado*/ 
+                  font-weight: bold ;        /*cambiar tipografia de cada item de la ul*/
+                  color: var(--blanco);     /*cambiar color de tipografia*/
+                }
+
+    .nav form {
+                 display: flex;
+                 align-items: center; /*centrar el formulario*/
+                 gap: 5px;
+                 margin-right: 20px;
+                    }
+
+/*-------------------------------------------------------------------------------
+                                SLIDER  
+ ------------------------------------------------------------------------------- */
+.slider {
+              text-align: center;   /*solo si tengo 1 img*/
+              margin-top: 30px;
+              /* margin-left:auto;
+              margin -right:auto;
+              max- width:100px;
+              
+              .slider img{
+                                 width:100%--------------------es una opcion si quiero modificar la proporcion de mi imagen  */
+            }
+
+/*-------------------------------------------------------------------------------
+                               CATEGORIAS
+------------------------------------------------------------------------------- */
+.sección-categorías {
+               margin: 20px 40px;
+               display: grid;      
+               grid-template-columns: 250px 1fr;
+               column-gap: 20px;   
+                                  }
+
+.lista-categorias {
+                list-style-type: none;     
+                            }      
+
+.lista-categorias li {
+                              padding: 7px 0px;
+                             border-bottom:  1px dashed var(--grisClaro)
+                             /* con lo de arriba generamos el borde punteado y espacio entre los items */
+                            }
+
+
+
+.mas-vendidas {
+                display: grid;
+                row-gap: 30px ;
+                grid-template-columns: repeat(2, 1fr);
+                
+                         }
+
+.tarjeta-lampara   {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 390px ;
+                             }    
+                            
+ .tarjeta-lampara h2{
+               grid-column: 1/3;   /*ocupa del inicio de la primer columna hasta el inicio de la tercer columna*/
+                                }                             
+
+
+         /*-------------------------------------------------------------------------------
+                              NEWLWTTER
+------------------------------------------------------------------------------- */
+
+.news {
+           background-color: rgb(255, 0, 157);   
+           display: flex;
+           align-items: center;
+           justify-content: space-around;
+          max-width: 1000px;
+          margin: auto;
+          border-radius: 8px;
+           }
